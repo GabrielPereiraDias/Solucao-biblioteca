@@ -1,5 +1,7 @@
 ![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=for-the-badge)
+
 ---
+
 # 📚 Ler é Crescer - Proposta de Solução
 
 ## 📖 Sobre o Projeto
