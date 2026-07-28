@@ -103,7 +103,7 @@ Além de atender aos requisitos técnicos, a proposta permanece dentro do orçam
 
 | Integrante | Função no Projeto |
 |------------|-------------------|
-| Gabriel Pereira | Desenvolvedor — Elaboração dos slides e documentação |
+| Gabriel Pereira | Desenvolvedor — Elaboração dos slides e elaboração do GitHub|
 | Victor Hugo | Desenvolvedor — Idealização e planejamento da solução |
 | Abner Rocha | Desenvolvedor — Idealização e planejamento da solução |
 | Miguel Caparroz | Product Owner (P.O.) — Organização e elaboração dos slides |
