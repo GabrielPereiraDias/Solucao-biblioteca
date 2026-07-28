@@ -1,119 +1,98 @@
 # 📚 Ler é Crescer - Proposta de Solução
 
-## Sobre o Projeto
+## 📖 Sobre o Projeto
 
-Este projeto foi desenvolvido como proposta de solução para o desafio apresentado pelo SENAI ao curso Técnico em Desenvolvimento de Sistemas.
-
-O objetivo é modernizar a gestão da Rede Municipal de Bibliotecas Comunitárias **"Ler é Crescer"**, composta por três unidades físicas, substituindo processos manuais por uma solução tecnológica integrada.
+Este projeto foi desenvolvido como parte de um desafio proposto pelo SENAI para apresentar uma solução tecnológica à Rede Municipal de Bibliotecas Comunitárias **"Ler é Crescer"**. O objetivo é modernizar o gerenciamento do acervo, centralizar o controle das três unidades e melhorar a preservação dos livros antigos por meio de tecnologias de automação e Internet das Coisas (IoT).
 
 ---
 
-# Contexto
+## 🎯 Objetivos
 
-Atualmente, a rede realiza o controle de empréstimos, devoluções e do acervo por meio de cadernos e planilhas, ocasionando:
-
-- perda de livros;
-- atrasos não identificados;
-- dificuldade em localizar exemplares entre as unidades;
-- ausência de sincronização das informações;
-- deterioração de livros antigos devido à umidade e às variações de temperatura.
-
-Além disso, a solução deveria respeitar um orçamento máximo de **R$ 18.000,00**.
+- Centralizar o gerenciamento do acervo das três unidades.
+- Automatizar o controle de empréstimos e devoluções.
+- Garantir a sincronização dos dados em tempo real.
+- Preservar livros antigos por meio do monitoramento ambiental.
+- Desenvolver uma solução viável dentro do orçamento proposto.
 
 ---
 
-# Objetivos
+## 🚨 Problema
 
-Nossa proposta busca:
-
-- centralizar o gerenciamento do acervo;
-- permitir empréstimos sincronizados entre as três unidades;
-- preservar livros antigos por meio de monitoramento ambiental;
-- atender aos requisitos da LGPD;
-- apresentar uma solução financeiramente viável e escalável.
+A rede de bibliotecas realiza o controle do acervo manualmente, utilizando cadernos e planilhas, o que gera perda de livros, atrasos não identificados e dificuldades para localizar exemplares entre as unidades. Além disso, livros de maior valor histórico sofrem deterioração devido à alta umidade e às variações de temperatura, principalmente na unidade localizada em um porão.
 
 ---
 
-# Como chegamos à solução
+## 🔍 Análise do Cenário
 
-Após analisar o cenário apresentado, identificamos dois grandes problemas:
+Após analisar o desafio, foram identificados dois problemas principais:
 
-## Gestão do acervo
+- Falta de integração entre as unidades, dificultando o gerenciamento do acervo.
+- Ausência de controle ambiental para preservar livros antigos.
 
-O controle manual impossibilita a atualização em tempo real das informações, dificultando a localização dos livros e aumentando a ocorrência de erros.
-
-Para resolver esse problema, optamos por um **banco de dados centralizado na nuvem**, permitindo que todas as unidades compartilhem as mesmas informações instantaneamente.
-
----
-
-## Preservação do patrimônio
-
-Os livros antigos sofrem deterioração devido à alta umidade, especialmente na unidade instalada em um porão.
-
-Após pesquisar alternativas de baixo custo, optamos pelo uso de sensores IoT capazes de monitorar continuamente temperatura e umidade.
-
-Quando a umidade atingir um nível crítico, tomadas inteligentes acionam automaticamente os desumidificadores, preservando o acervo sem necessidade de intervenção humana.
+A partir dessa análise, foram pesquisadas alternativas que apresentassem baixo custo, facilidade de implementação e possibilidade de expansão futura.
 
 ---
 
-# Tecnologias Utilizadas
+## 💡 Solução Proposta
 
-## Software
+A proposta consiste na implantação de um sistema de gerenciamento integrado a um banco de dados em nuvem, permitindo que todas as unidades compartilhem informações em tempo real.
 
+Para a preservação do acervo, foi projetado um sistema de monitoramento ambiental utilizando sensores IoT (ESP32 e DHT22), responsáveis por medir temperatura e umidade. Quando os níveis de umidade ultrapassarem o limite estabelecido, tomadas inteligentes acionam automaticamente os desumidificadores, protegendo os livros sem necessidade de intervenção manual.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### Software
+- Sistema Web
 - Banco de Dados em Nuvem
-- Sistema Web para gerenciamento do acervo
-- Controle de usuários e permissões
+- Controle de usuários
 - Backup de dados
-- Adequação à LGPD
 
-## Hardware
-
+### Hardware
 - ESP32
 - Sensor DHT22
 - Tomadas Inteligentes Wi-Fi
-- Desumidificadores de Ar
-- Infraestrutura de rede
+- Desumidificadores
+- Infraestrutura de Rede
 
 ---
 
-# Arquitetura da Solução
+## 💰 Viabilidade Financeira
 
-A proposta conecta as três bibliotecas a um banco de dados central hospedado na nuvem.
+A solução foi planejada para respeitar o orçamento máximo de **R$ 18.000,00**.
 
-Cada unidade possui um kit IoT formado por um ESP32 e um sensor DHT22 responsável pelo monitoramento ambiental.
+- Hardware e infraestrutura: **R$ 13.560,00**
+- Reserva técnica: **R$ 4.440,00**
 
-Quando a umidade ultrapassa os limites definidos, o sistema aciona automaticamente os desumidificadores através das tomadas inteligentes, protegendo os livros.
-
-Ao mesmo tempo, todos os empréstimos e devoluções são registrados em tempo real, mantendo o acervo sincronizado entre as unidades.
-
----
-
-# Investimento
-
-| Item | Valor |
-|-------|-------:|
-| Hardware e infraestrutura | **R$ 13.560,00** |
-| Reserva técnica | **R$ 4.440,00** |
-| **Orçamento total disponível** | **R$ 18.000,00** |
-
-A proposta permanece dentro do orçamento disponibilizado pela diretoria.
+O projeto mantém margem financeira para eventuais ajustes e imprevistos.
 
 ---
 
-# Benefícios Esperados
+## ✅ Benefícios Esperados
 
-- Controle centralizado do acervo;
-- Atualização em tempo real dos empréstimos;
-- Redução de perdas de livros;
-- Maior segurança das informações;
-- Preservação preventiva dos livros antigos;
-- Conformidade com a LGPD;
-- Solução preparada para expansão futura.
+- Controle centralizado do acervo.
+- Empréstimos sincronizados entre as unidades.
+- Redução de perdas e atrasos.
+- Preservação preventiva dos livros.
+- Segurança das informações e conformidade com a LGPD.
+- Solução escalável e preparada para futuras expansões.
 
 ---
 
-# Conclusão
+## 📌 Conclusão
 
-A solução proposta integra tecnologia da informação e Internet das Coisas (IoT) para resolver os principais desafios enfrentados pela Rede Municipal de Bibliotecas Comunitárias "Ler é Crescer".
+A proposta integra gerenciamento em nuvem e monitoramento inteligente do ambiente para solucionar os principais desafios da Rede Municipal de Bibliotecas Comunitárias "Ler é Crescer". Além de melhorar a organização do acervo, a solução protege o patrimônio físico da instituição e apresenta uma infraestrutura moderna, sustentável e compatível com o orçamento disponível.
 
-Com um investimento compatível com o orçamento disponível, a proposta oferece uma infraestrutura moderna, automatizada e escalável, melhorando a gestão do acervo, garantindo a sincronização entre as unidades e preservando o patrimônio bibliográfico por meio do controle inteligente da umidade.
+---
+
+## 👥 Equipe
+
+- Gabriel Pereira Dias
+- Vinycius Lopes
+- Gabriel de Araújo
+- Caline Myrella
+- Pedro Henrique Prandwiski
+
+**Curso:** Técnico em Desenvolvimento de Sistemas  
+**Instituição:** SENAI
